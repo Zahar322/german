@@ -1,8 +1,11 @@
 package com.company;
 
-import com.company.service.SubordinateHierarchyCreateService;
-import com.company.service.SubordinateHierarchyCreateServiceImpl;
+import com.company.model.Subject;
+import com.company.model.UnluckyVassal;
+import com.company.service.SubjectService;
+import com.company.service.SubjectServiceImpl;
 import com.company.util.Converter;
+import com.company.util.SubjectComparator;
 
 import java.util.List;
 
@@ -25,8 +28,7 @@ public class Main {
     );
 
     public static void main(String[] args) {
-       // System.out.println(Converter.convert(pollResults));
-        SubordinateHierarchyCreateService subordinateHierarchyCreateService=new SubordinateHierarchyCreateServiceImpl();
-        subordinateHierarchyCreateService.createSubordinateHierarchy(Converter.convert(pollResults));
+        UnluckyVassal unluckyVassal = new UnluckyVassal();
+        unluckyVassal.printReportForKing(pollResults);
     }
 }
