@@ -45,17 +45,4 @@ public class Subject {
         return name + stringBuilder.toString();
     }
 
-    @Override
-    public String toString() {
-        String result = "";
-        StringBuilder stringBuilder = new StringBuilder();
-        if (subjects != null) {
-            for (Subject subject : subjects) {
-                stringBuilder.append("\n");
-                stringBuilder.append(subject.toString());
-            }
-        }
-        return name + stringBuilder.toString();
-    }
-
 }
